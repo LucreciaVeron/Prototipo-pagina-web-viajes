@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/StyleBus/css/bootstrap.min.css">
+  <title>StyleBus</title>
+
+
+  <!--JQUERY-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Los iconos tipo Solid de Fontawesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+  <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+
+
+
+
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar de la marca -->
+
+
+        <a class="navbar-brand mt-2 mt-lg-0" href="index.html">
+          <div class="col text-light text-right">
+            <h1 class="display-6 ">StyleBus.</h1>
+          </div>
+        </a>
+
+        <div class="d-flex" style="height: 22px; width : 2px; color: black;">
+          <div class="vr"></div>
+        </div>
+
+        <!-- links de la izquierda -->
+
+        <!--  links de la izquierda -->
+      </div>
+      <!-- Collapsible wrapper -->
+
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <!-- Icon -->
+
+
+
+
+        <div class="me-1"><a href="login.html" class="btn btn btn-outline-light" role="button">Iniciar
+            Sesión</a>
+        </div>
+
+        <div><a href="crearCuenta.html" class="btn btn btn-light me-1" role="button">Crear Cuenta</a>
+        </div>
+
+
+
+      </div>
+
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+
+
+  </nav>
+
+
+
+  <hr style="color: white; height: 5px; width: 1900px;" />
+
+
+
+
+  <div class="container">
+
+    <section class="ml-3 mb-2">
+      <div class="d-flex justify-content-between align-items-center mb-5">
+        <div class="d-flex flex-row align-items-center">
+          <h4 class="text-uppercase mt-1">StyleBus</h4>
+          <span class="ms-2 me-3">Pay</span>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+
+
+
+        <div class="col">
+
+          <h5 class="mb-3">Complete los datos de pago</h5>
+          <div>
+
+            <hr />
+
+
+            <form action="" method="POST" id="formularioPagoRECAP">
+
+              <!--Nombre-->
+              <div class="form-outline mb-2">
+
+                <input type="text" name="nombre" id="nombreRECAP" class="form-control form-control-lg">
+                <label class="form-label text-light" for="nombre" for="nombreRECAP">Nombre</label>
+
+                <div id="errorNombreRECAP"> </div>
+
+              </div>
+
+              <!--Apellido-->
+              <div class="form-outline mb-2">
+                <input type="text" id="apellidoRecap" class="form-control form-control-lg" name="apellido" />
+                <label class="form-label text-light" for="apellidoRecap">Apellido</label>
+
+                <div id="errorApellidoRECAP"> </div>
+
+              </div>
+              <!--Email-->
+              <div class="form-outline mb-2">
+                <input type="email" id="emailRecap" class="form-control form-control-lg" name="email" />
+                <label class="form-label text-light" for="emailRecap">Correo electronico</label>
+
+                <div id="errorMailRECAP"> </div>
+              </div>
+
+              <div class="align-items-centern form-outline">
+                <p class="text-secondary">Seleccione su metodo de pago</p>
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+
+                  <div class="btn radio-btn mb-3 text-dark"> <label class="radio"> <input type="radio" name="book"
+                        id="tarjetaCreditoCheck">
+                      Tarjeta de crédito <span></span>
+                    </label> </div>
+
+                  <div class="btn radio-btn mb-3 text-dark"> <label class="radio"> <input type="radio" name="book"
+                        id="mercadoPagoCheck">
+                      Mercado Pago <span></span>
+                    </label> </div>
+
+                  <div class="btn radio-btn mb-3 text-dark"> <label class="radio"> <input type="radio" name="book"
+                        id="cajaAhorroCheck">
+                      Caja de ahorro<span></span>
+                    </label> </div>
+
+                </div>
+
+                <div class="form-outline mb-2 mt-2">
+                  <input type="text" id="TarjetaCreditoInput" class="form-control form-control-lg"
+                    name="TarjetaCreditoInput" placeholder="Ingrese la clave de seguridad de su tarjeta" />
+
+
+                  <input type="text" id="mercadoPagoCVUInput" class="form-control form-control-lg"
+                    name="mercadoPagoCVUInput" placeholder="Ingrese su password de mercadoPago" hidden />
+
+                  <input type="text" id="CajaPassword" class="form-control form-control-lg"
+                    name="CajaPassword" placeholder="Ingrese su password bancaria" hidden />
+
+
+                  <div id="errorClaveOCBU"> </div>
+                </div>
+
+              </div>
+
+              <div id="errorRECAP"> </div>
+
+              <div class="d-flex justify-content-end mb-2 mt-4">
+                <button type="submit" class="btn btn-block btn-lg btn-outline-light text-white-60 btn-dark"
+                  id="botonConfirmarCompraRECAP">Confirmar Compra</button>
+              </div>
+
+
+
+
+
+
+
+              <div id="errorcc"> </div>
+            </form>
+
+
+          </div>
+        </div>
+
+        <div class="col background-primary">
+          <div class="p-3">
+            <span class="fw-bold">Detalle de su pedido</span>
+
+            <hr />
+
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="d-flex flex-row mt-1">
+                <h6 class="me-2">Puntos StyleBus disponibles para su canje</h6>
+
+              </div>
+
+
+              <div class="d-flex flex-row align-items-center text-primary">
+                <h6 class="fw-bold text-success ms-1">300</h6>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="d-flex justify-content-between mt-2">
+              <span class="lh-sm">Viaje Cordoba 7 días<br />
+
+              </span>
+              <span>$40.00</span>
+            </div>
+            <div class="d-flex justify-content-between mt-2">
+              <span class="lh-sm">Cordoba 14 días<br />
+              </span>
+              <span>$40.00</span>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between mt-2">
+              <span>Comisión Stylebus </span> <span>$71.76</span>
+            </div>
+            <div class="d-flex justify-content-between mt-2">
+              <span>Costos de servicio </span> <span>$13.24</span>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between mt-2 mb-4">
+              <span>Total </span> <span class="text-success">$85.00</span>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <div>
+
+
+
+      </div>
+
+  </div>
+  </section>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+
+
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-white" href="#!">StyleBus.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+  </div>
+  </div>
+
+  <script src="/StyleBus/recap.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+
+</html>

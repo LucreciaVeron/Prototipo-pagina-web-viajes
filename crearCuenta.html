@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/StyleBus/css/bootstrap.min.css">
+  <title>StyleBus</title>
+
+
+  <!--JQUERY-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Los iconos tipo Solid de Fontawesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+  <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar de la marca -->
+
+
+        <a class="navbar-brand mt-2 mt-lg-0" href="index.html">
+          <div class="col text-light text-right">
+            <h1 class="display-6 ">StyleBus.</h1>
+          </div>
+        </a>
+
+        <div class="d-flex" style="height: 22px; width : 2px; color: black;">
+          <div class="vr"></div>
+        </div>
+
+        <!-- links de la izquierda -->
+
+        <!--  links de la izquierda -->
+      </div>
+      <!-- Collapsible wrapper -->
+
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <!-- Icon -->
+
+
+
+
+        <div class="me-1"><a href="login.html" class="btn btn btn-outline-light" role="button">Iniciar
+            Sesión</a>
+        </div>
+
+        <div><a href="crearCuenta.html" class="btn btn btn-light me-1" role="button">Crear Cuenta</a>
+        </div>
+
+
+
+      </div>
+
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+
+
+  </nav>
+
+  <hr style="color: white; height: 5px; width: 1900px;" />
+
+
+  <div class="container"></div>
+
+  <section class="vh-100 gradient-custom mb-4" style="background-color: #292B2C;">
+    <div class="mask d-flex align-items-center h-100 gradient-custom ">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card text-white bg-dark" style="border-radius: 15px;">
+              <div class="card-body p-5">
+                <h2 class="text-uppercase text-center mb-5 text-light">Crear Cuenta</h2>
+
+                <form action="" method="POST" id="formularioCrearCuenta">
+
+                  <!--Nombre-->
+                  <div class="form-outline">
+
+                    <input type="text" id="nombre" class="form-control form-control-md" name="nombre">
+                    <label class="form-label text-light" for="nombre" name="nombre">Nombre</label>
+                    <div id="errorNombre"> </div>
+                  </div>
+
+                  <!--Apellido-->
+                  <div class="form-outline">
+                    <input type="text" id="apellido" class="form-control form-control-md" name="apellido" />
+                    <label class="form-label text-light" for="apellido">Apellido</label>
+                    <div id="errorApellido"> </div>
+                  </div>
+
+                  <!--Direccion-->
+                  <!--Calle-->
+                  <div class="form-outline mb-2">
+                    <input type="text" id="calleNombre" class="form-control form-control-md" name="calleNombre" />
+                    <label class="form-label text-light" for="calleNombre">Calle</label>
+                    <div id="errorDirCalle"> </div>
+                    <!--numero-->
+                    <input type="text" id="numDireccion" class="form-control form-control-md" name="numDireccion" />
+                    <label class="form-label text-light" for="numDireccion">Altura</label>
+                    <div id="errorDirNum"> </div>
+
+                  </div>
+
+                  <!--Fecha nacimiento-->
+                  <div class="form-outline mb-4">
+                    <p class="h-blue">Fecha de nacimiento</p> <input class="inputbox textmuted" type="date"
+                      max="<?php echo date('Y-m-d');?>" id="fechaNac">
+                  </div>
+
+                  <!--email-->
+                  <div class="form-outline mb-1">
+                    <input type="email" id="mail" class="form-control form-control-md" name="mail" />
+                    <label class="form-label text-light" for="mail">Email</label>
+                    <div id="errorMail"> </div>
+                  </div>
+
+
+                  <!--password-->
+                  <div class="form-outline ">
+                    <input type="password" id="password" class="form-control form-control-md" name="password" />
+                    <label class="form-label text-light" for="password">Contraseña</label>
+                    <div id="errorPassword"> </div>
+                  </div>
+
+
+                  <h6 class="text-light mt-2">Seleccione su medio de pago</h6>
+
+                  <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+
+                    <div class="btn radio-btn mb-3 text-light"> <label class="radio"> <input type="radio" name="book"
+                          id="tarjetaCreditoCheck">
+                        Tarjeta de crédito <span></span>
+                      </label> </div>
+
+                    <div class="btn radio-btn mb-3 text-light"> <label class="radio"> <input type="radio" name="book"
+                          id="mercadoPagoCheck">
+                        Mercado Pago <span></span>
+                      </label> </div>
+
+                    <div class="btn radio-btn mb-3 text-light"> <label class="radio"> <input type="radio" name="book"
+                          id="cajaAhorroCheck">
+                        Caja de ahorro<span></span>
+                      </label> </div>
+
+                  </div>
+
+
+
+
+                  <!--Datos tarjeta-->
+                  <!--Nombre en tarjeta-->
+                  <div class="form-outline" id="formularioTarjetaGrupo" hidden>
+                    <input type="text" id="nombreTarjetaCredito" class="form-control form-control-md"
+                      name="nombreTarjetaCredito" />
+                    <label class="form-label text-light" for="nombreTarjetaCredito">Nombre tarjeta de crédito</label>
+                    <div id="errorNombreTarjetaCredito"> </div>
+
+                    <!--numero Tarjeta Credito-->
+                    <input type="number" id="numTarjetaDeCredito" class="form-control form-control-md"
+                      name="numTarjetaDeCredito" />
+                    <label class="form-label text-light" for="numTarjetaDeCredito">Numero Tarjeta crédito</label>
+                    <div id="errorNumeroTarjetaCredito"> </div>
+
+                    <!--Fecha vencimiento tarjeta MM/AAAA-->
+
+                    <div class="input-group"> <input type="number" placeholder="MM" name="mesVencimientoTarjeta"
+                        class="form-control" id="mesVencimientoTarjeta">
+                      <input type="number" placeholder="YYYY" id="AñoVencimientoTarjeta" class="form-control"
+                        name="AñoVencimientoTarjeta">
+
+                    </div>
+
+                    <h6 class="text-light mt-2"> Fecha de Vencimiento tarjeta </h6>
+                    <div id="errorVencimientoTarjetaCredito"> </div>
+
+
+                    <!--CVV-->
+                    <input type="number" id="CVVTarjetaCredito" class="form-control form-control-md"
+                      name="CVVTarjetaCredito" />
+                    <div id="errorCVVTarjetaCredito"> </div>
+                    <h6 class="text-success mt-2">CVV <i class="fa fa-question-circle d-inline"></i>
+                    </h6>
+
+                  </div>
+
+
+
+
+
+
+
+
+
+
+                  <!--Datos MercadoPago-->
+                  <div class="form-outline" id="formularioMercadoPagoGrupo" hidden>
+
+                    <!--email-->
+                    <div class="form-outline mb-1">
+                      <input type="email" id="mailMercadoPago" class="form-control form-control-md"
+                        name="mailMercadoPago" />
+                      <label class="form-label text-light" for="mailMercadoPago">Email MercadoPago</label>
+                      <div id="errormailMercadoPago"> </div>
+                    </div>
+
+                    <!--password-->
+                    <div class="form-outline ">
+                      <input type="password" id="passwordMercadoPago" class="form-control form-control-md"
+                        name="passwordMercadoPago" />
+                      <label class="form-label text-light" for="passwordMercadoPago">Contraseña MercadoPago</label>
+                      <div id="errorpasswordMercadoPago"> </div>
+                    </div>
+
+                    <!--numero Caja de ahorro 22 Digitos numericos-->
+                    <input type="number" id="numCVUMercadoPago" class="form-control form-control-md"
+                      name="numCVUMercadoPago" />
+                    <label class="form-label text-light" for="numCVUMercadoPago">Numero de CVU MercadoPago</label>
+                    <div id="errorNumCVUMercadoPago"> </div>
+
+                  </div>
+
+
+
+
+
+
+                  <!--Datos Caja de ahorro-->
+                  <div class="form-outline" id="formularioCajaAhorro" hidden>
+
+                    <!--email registrado-->
+                    <div class="form-outline mb-1">
+                      <input type="email" id="mailBanco" class="form-control form-control-md" name="mailBanco" />
+                      <label class="form-label text-light" for="mailBanco">Email Cuenta Bancaria</label>
+                      <div id="errormailBanco"> </div>
+                    </div>
+
+
+                    <!--Pin Bancario-->
+                    <div class="form-outline ">
+                      <input type="password" id="PinBanco" class="form-control form-control-md" name="PinBanco" />
+                      <label class="form-label text-light" for="PinBanco">Pin Bancario</label>
+                      <div id="errorPasswordBanco"> </div>
+                    </div>
+
+
+                    <!--numero Caja de ahorro 22 Digitos numericos-->
+                    <input type="number" id="numCBUCajaAhorro" class="form-control form-control-md"
+                      name="numCBUCajaAhorro" />
+                    <label class="form-label text-light" for="numCBUCajaAhorro">Numero de CBU Caja de ahorro
+                      bancaria</label>
+                    <div id="errornumCBUCajaAhorro"> </div>
+
+
+
+
+
+
+                  </div>
+
+
+
+
+
+                  <div>
+
+                  </div>
+
+
+
+
+
+
+                  <div class="d-flex justify-content-end mb-2 mt-2">
+                    <button type="submit"
+                      class="btn btn-block btn-lg btn-outline-light text-white-60 gradient-custom">Registrarse</button>
+                  </div>
+
+
+                  <div id="errorcc"> </div>
+
+                  <!--El checkbox de-->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="RecibisPromos">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Quiero recibir promociones por mail
+                    </label>
+                  </div>
+                </form>
+
+
+
+              </div>
+            </div>
+
+
+
+            <div>
+              <p class="text-center text-muted text-light">Ya tenes cuenta? <a href="login.html"
+                  class="text-white-50 fw-bold"><u>Iniciar Sesión</u></a></p>
+
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+
+    </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <script src="/StyleBus/js/crearCuenta.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
